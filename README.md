@@ -1,2 +1,2 @@
 # CryptoApp
-A simple crypto data displaying app built using React
+A simple crypto data displaying app built using Reactjs
