@@ -8,7 +8,7 @@ const Context = () => {
       </div>
       <div className='lg:mr-20 px-4 lg:h-[280px] lg:w-[686px] md:h-[280px] md:w-[486px] md:py-5  lg:py-10 rounded-md py-2 '>
         <h2 className='lg:text-4xl md:text-3xl text-2xl font-semibold'>Earn passive income with <br></br> Crypto.</h2>
-        <p className='text-lg  lg:text-xl md:text-lg font-semibold mt-3'>Trade assets, manage your holdings, and set recurring buys <br></br>on the crypto industry’s.</p>
+        <p className='text-lg  lg:text-xl md:text-lg font-semibold mt-3'>Trade assets, manage your holdings, and set recurring buys <br></br>on the crypto platforms.</p>
       </div>
     </div>
   )

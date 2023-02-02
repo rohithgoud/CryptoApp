@@ -1,5 +1,5 @@
 import React from 'react'
-// import {FiArrowDown, FiArrowUpRight} from 'react-icons/fi'
+ import {FiArrowDown, FiArrowUpRight} from 'react-icons/fi'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
@@ -32,7 +32,7 @@ const Featured = () => {
       <div className='space-y-3'>
         <h2 className='lg:text-4xl md:text-4xl text-3xl  font-semibold '>Explore top Crypto's like <br></br> Bitcoin, Ethereum, and Dogecoin.</h2>
         <p className='text-xl font-semibold'>Check all available coins </p>
-        <button className=' px-7 py-3  bg-[#3593f0] rounded-md  text-white text-xl   '><Link to='/coins'>See more coins</Link></button>
+        <button className=' px-7 py-3  bg-[#3e1bdb]   text-white text-xl '><Link to="/coins">See more coins</Link></button>
       </div>
 
       <div className='mt-10 grid gap-3 lg:grid-cols-3 lg:gap-4 md:grid-cols-3 px-2 my-6 md:gap-4 grid-cols-2'>
@@ -40,14 +40,15 @@ const Featured = () => {
       {
   coins.map( (i)=>(
 
-<div className=' hover:scale-[1.05] transition-all ease-in delay-50 text-black w-36  h-36 px-4 py-4 rounded-lg shadow-lg cursor-pointer lg:w-54 md:w-44 '>
+<div className=' hover:scale-[1.05]  hover:bg-gray-50  transition-all ease-in delay-50 text-black w-36  h-36 px-4 py-4 rounded-lg shadow-lg cursor-pointer lg:w-54 md:w-44 '>
        <div className='flex'>
        <img className='w-6 mr-1' src={i.image} alt={i.id} />
           <h3 className='font-semibold text-xl'><Link to={`/coin/${i.id}`}>{i.name}</Link></h3>
        </div>
           <div className='ml-4'>
           <p className='text-xl '>${i.current_price.toLocaleString()}</p>
-          <p className={i.price_change_percentage_24h > 0 ? "text-green-500" : "text-red-600"}>{i.price_change_percentage_24h.toFixed(2)}%</p>
+          <p className={i.price_change_percentage_24h > 0 ?  "text-green-500"  : "text-red-600"}
+          >{i.price_change_percentage_24h.toFixed(2)}%{i.price_change_percentage_24h > 0 ?<FiArrowUpRight/> :<FiArrowDown/> }</p>
           </div>
         </div>
           

@@ -49,9 +49,9 @@ setCurrency(e.target.value)
 
     <div className='flex w-24 mt-4 ml-20'>
 <select value={currency}  onChange={changeCurrency} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-  <option value="inr">inr</option>
-  <option value="eur">eur</option>
-  <option value="usd">usd</option>
+  <option value="inr">INR</option>
+  <option value="eur">EUR</option>
+  <option value="usd">USD</option>
 
 </select></div>
 
