@@ -29,14 +29,14 @@ const Navbar = () => {
             </li>
             
             <li className='text-lg  font-semibold '>
-            <Link to="/coin/:id">News</Link>
+            <Link to="/Nft">NFT</Link>
             </li>
            
         
 
         </ul>
         <div className='hidden lg:inline-flex md:inline-flex'>
-            <button className=' px-7 py-2 h-10 md:px-6 text-md hover:shadow-md  bg-[#3e1bdb]  rounded-sm font-semibold text-white  '><Link to="/signup">Sign up</Link></button>
+            <button className=' px-7 py-2 h-10 md:px-6 text-md hover:shadow-md rounded bg-[#3e1bdb] font-semibold text-white  '><Link to="/signup">Sign up</Link></button>
         </div>
 
         <div onClick={handleClick}>
@@ -54,7 +54,7 @@ const Navbar = () => {
             <Link to="/coins">Coins</Link>  
             </li>
             <li className='text-lg  hover:text-[#3e1bdb] pl-6    pb-2'>
-            <Link to="/coin/:id">Coindetails</Link>
+            <Link to="/Nft">NFT</Link>
             </li>
          
             

@@ -5,8 +5,9 @@ import { useParams } from 'react-router-dom'
 import DOMPurify from 'dompurify'
 
 
+
 const Coindetails = () => {
-  // https://api.coingecko.com/api/v3/coins/bitcoin
+   
 
 const params = useParams()
 
@@ -17,11 +18,17 @@ const [coins,setCoins] = useState({})
 useEffect(()=>{
 
   const fetchCoins = async()=>{
-  
+  try{
   const {data} = await axios.get(`https://api.coingecko.com/api/v3/coins/${params.id}`)
- 
+  
   setCoins(data);
 
+  }
+
+  catch (error) {
+    console.log("Error while fetching coins")
+      
+    }
   }
   
   fetchCoins();
@@ -48,8 +55,8 @@ useEffect(()=>{
     <p className='lg:text-2xl md:text-xl text-lg pr-3 pt-1 font-semibold'>{coins.name}</p>
     {coins.symbol ? <p className='lg:text-xl md:text-lg text-sm font-semibold pt-2 '>{coins.symbol.toUpperCase()}/USD</p> : null}</div>
     </div>
-    <div>
-    {coins.market_data?.current_price ? <h1 className='lg:text-4xl md:text-2xl text-xl lg:pr-10 md:pr-5 pr-2 font-semibold'>${coins.market_data.current_price.usd.toLocaleString()}</h1> : null}
+    <div className='lg:pr-10 md:pr-5 pr-2'>
+    {coins.market_data?.current_price ? <h1 className='lg:text-4xl md:text-2xl text-xl font-semibold'>${coins.market_data.current_price.usd.toLocaleString()}</h1> : null}
     </div>
        </div>
       </div>

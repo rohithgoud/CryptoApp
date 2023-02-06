@@ -14,11 +14,17 @@ const Featured = () => {
   useEffect(()=>{
 
     const fetchCoins = async()=>{
-    
+    try{
     const {data} = await axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=6`)
    
     setcoins(data);
-    
+   
+    }
+
+    catch (error) {
+      console.log("Error while fetching coins")
+        
+      }
     }
     
     fetchCoins();
@@ -32,7 +38,7 @@ const Featured = () => {
       <div className='space-y-3'>
         <h2 className='lg:text-4xl md:text-4xl text-3xl  font-semibold '>Explore top Crypto's like <br></br> Bitcoin, Ethereum, and Dogecoin.</h2>
         <p className='text-xl font-semibold'>Check all available coins </p>
-        <button className=' px-7 py-3  bg-[#3e1bdb]   text-white text-xl '><Link to="/coins">See more coins</Link></button>
+        <button className=' px-7 py-3 rounded bg-[#3e1bdb]   text-white text-xl '><Link to="/coins">See more coins</Link></button>
       </div>
 
       <div className='mt-10 grid gap-3 lg:grid-cols-3 lg:gap-4 md:grid-cols-3 px-2 my-6 md:gap-4 grid-cols-2'>
@@ -40,7 +46,7 @@ const Featured = () => {
       {
   coins.map( (i)=>(
 
-<div className=' hover:scale-[1.05]  hover:bg-gray-50  transition-all ease-in delay-50 text-black w-36  h-36 px-4 py-4 rounded-lg shadow-lg cursor-pointer lg:w-54 md:w-44 '>
+<div key={i.id} className=' hover:scale-[1.05]  hover:bg-gray-50  transition-all ease-in delay-50 text-black w-36  h-36 px-4 py-4 rounded-lg shadow-lg cursor-pointer lg:w-54 md:w-44 '>
        <div className='flex'>
        <img className='w-6 mr-1' src={i.image} alt={i.id} />
           <h3 className='font-semibold text-xl'><Link to={`/coin/${i.id}`}>{i.name}</Link></h3>
