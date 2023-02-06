@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { server } from '../index'
 import Navbar from './HomeComp/Navbar';
+import Trending from './Trending';
 
 
 
@@ -29,7 +30,6 @@ fetchExchanges();
   return (
     <>
 <Navbar/>
-
 <div className='bg-gray-100 pt-10'>
 <h1 className='lg:text-4xl md:text-2xl text-2xl font-semibold lg:ml-24 md:ml-14 ml-5 '>Top Cryptocurrency Exchanges</h1>
 <p className=' text-lg text-gray-500 lg:ml-24 md:ml-14 ml-5 mt-2 mb-8'>Ranks and scores of exchanges based on traffic, liquidity, trading volumes, and confidence in the legitimacy of trading volumes reported.</p>
@@ -73,7 +73,9 @@ lg:mx-7'>
 </div>
 
 
-      
+
+<Trending/> 
+ 
     
     </>
   )

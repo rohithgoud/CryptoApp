@@ -13,10 +13,10 @@ const Navbar = () => {
     }
 
   return (
-    <div className='lg:h-[60px] md:h-[60px] h-[58px] bg-gray-50   dark:bg-gray-1000 '>
+    <div className='lg:h-[60px] md:h-[60px] h-[58px] bg-gray-50  '>
        
     <div  className="  lg:w-full flex lg:justify-evenly md:justify-evenly justify-between px-8 md:px-2 lg:px-0 items-center py-3  ">
-        <h1 className=' hover-underline-animation text-3xl font-semibold  cursor-pointer'><Link to="/">D e F i</Link></h1>
+        <h1 className=' hover-underline-animation text-3xl font-semibold cursor-pointer'><Link to="/">Cryptoverse</Link></h1>
         <ul className='hidden md:flex md:space-x-6 lg:space-x-12 '>
             <li className='text-lg  font-semibold '>
             <Link to="/">Home</Link>
@@ -43,7 +43,7 @@ const Navbar = () => {
          {toggle ?<AiOutlineClose className='md:hidden' size={20} />:<FaBars className = 'md:hidden ' size={20}/>} 
         </div>
 
-      <ul className={toggle ? `md:hidden w-full shadow-md  flex flex-col absolute top-[55px] bg-gray-50 right-0 z-[2] h-auto  pt-3 pb-6 space-y-6 transition-all duration-1000 ease-in-out  `: `absolute top-[-100%]`}  >
+      <ul className={toggle ? `md:hidden w-full shadow-md  flex flex-col absolute top-[55px] bg-gray-50 right-0 z-[2] h-auto  pt-3 pb-6 space-y-6 transition-all duration-500 ease-in-out  `: `absolute top-[-100%]`}  >
             <li className='text-lg hover:text-[#3e1bdb]    pl-6 pb-2'>
                <Link to="/">Home</Link>
             </li>
@@ -60,7 +60,7 @@ const Navbar = () => {
             
             <button className=' w-[90%] ml-5 mr-3 py-2 hover:shadow-md  bg-[black] text-white  rounded-sm text-lg font-semibold   '>Login</button>
 
-            <button className=' w-[90%] ml-5 mr-3 py-2 hover:shadow-md  bg-[#3e1bdb]  rounded-sm font-semibold text-lg text-white  '>Sign up</button>
+            <button className=' w-[90%] ml-5 mr-3 py-2 hover:shadow-md  bg-[#3e1bdb]  rounded-sm font-semibold text-lg text-white  '><Link to="/signup">Sign up</Link></button>
         </ul>
         
         </div>

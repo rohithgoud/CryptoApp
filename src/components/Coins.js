@@ -3,6 +3,7 @@ import axios from 'axios'
 import { server } from '../index'
 import Navbar from './HomeComp/Navbar'
 import { Link } from 'react-router-dom'
+import Trending from './Trending'
 
 const Coins = () => {
   const [coins,setcoins] = useState([]);
@@ -60,7 +61,7 @@ setCurrency(e.target.value)
       <div className='rounded-div my-10 py-4'>
         
         <table className='w-full border-collapse text-center'>
-            <thead className='dark:text-white'>
+            <thead >
                 <tr className='border-b'>
                     
                     <th>#</th>
@@ -73,7 +74,7 @@ setCurrency(e.target.value)
                     
                 </tr>
             </thead>
-            <tbody className='dark:text-white'>
+            <tbody>
              
       {
   coins.map( (i)=>(
@@ -93,7 +94,7 @@ setCurrency(e.target.value)
       <td>
         <div><Link to={`/coin/${i.id}`}>{i.symbol.toUpperCase()}</Link></div>
       </td>
-      <td>{currencySymbol} {i.current_price.toLocaleString()}</td>
+      <td><Link to={`/coin/${i.id}`}>{currencySymbol} {i.current_price.toLocaleString()}</Link> </td>
       <td className={i.price_change_percentage_24h > 0 ? "text-green-500" : "text-red-600"}>{i.price_change_percentage_24h.toFixed(2)}%</td>
       <td className='w-[200px] hidden md:table-cell'>{currencySymbol} {i.total_volume.toLocaleString()}</td>
       <td className='w-[200px] hidden md:table-cell' >{currencySymbol} {i.market_cap.toLocaleString()}</td>
@@ -114,6 +115,7 @@ setCurrency(e.target.value)
 
 </div>
 </div>
+<Trending/>
     </div>
   )
 }
