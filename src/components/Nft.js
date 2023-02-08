@@ -43,21 +43,21 @@ const Nft = () => {
     <div>
       <Navbar/>
       
-<div className='bg-gray-100 pt-10'>
+<div className='bg-black pt-10 text-white'>
 <h1 className='text-3xl text-center font-semibold mb-4'>Trending Nft's</h1>
 <div className='grid lg:grid-cols-4 gap-3 md:grid-cols-2 md:mx-4 mx-2
 lg:mx-7'>
 {
     nft.map((item)=>(
 
-<div key={item.id} className="  cursor-pointer rounded-md bg-white">
+<div key={item.id} className=" hover:bg-gray-800  cursor-pointer rounded-md bg-gray-900">
       <div>
       <Link to={`/Nft/${item.id}`}>
-       <div className="h-full flex  items-center border-gray-300  p-4" key={item.id}>
+       <div className="h-full flex  items-center  p-4" key={item.id}>
           <div className="flex-grow">
-          <p className=" bg-gray-100 text-xl font-semibold" >Symbol: {item.symbol}</p>
-            <h2 className="text-gray-900 title-font font-medium">Name: {item.name}</h2>
-            <p className="text-gray-900">Asset platform: {item.asset_platform_id
+          <p className="  text-xl font-semibold rounded-md px-1 bg-gray-300 text-black" >Symbol: {item.symbol}</p>
+            <h2 className=" title-font font-medium">Name: {item.name}</h2>
+            <p >Asset platform: {item.asset_platform_id
 }</p>
 
 

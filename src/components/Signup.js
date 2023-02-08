@@ -30,10 +30,9 @@ const Signup = () => {
  
 
   return (
-    <>
+    <div >
   <Navbar/>
-  {/* {presentUser ? <Watchlist/>:<Signup/>} */}
-    <div className='flex flex-col justify-center items-center mt-10'>
+    <div className='flex flex-col justify-center items-center mt-10 pb-28'>
       <h1 className="lg:text-5xl md:text-5xl font-bold md:mb-6 text-4xl  py-2">Create an account</h1>
 
 
@@ -58,7 +57,7 @@ I certify that I am 18 years of age or older, I agree to the User Agreement, and
      </form>
     
   </div>
-    </>
+    </div>
   )
 }
 

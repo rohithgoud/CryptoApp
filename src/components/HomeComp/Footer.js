@@ -2,10 +2,10 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div className=' text-black '>
+    <div >
     <div className='   grid lg:grid-cols-5 md:grid-cols-4 pt-10 lg:gap-10 md:gap-10 lg:px-36 md:px-32 px-10 '>
       <div>
-      <h1 className=' text-3xl font-semibold cursor-pointer'>D e F i</h1>
+      <h1 className=' text-3xl font-semibold cursor-pointer'>Cryptoverse</h1>
       <p>@defi</p>
       </div>
       <div>

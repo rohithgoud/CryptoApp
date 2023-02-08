@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 function TrendingItem({coin}) {
   return (
       <div>
-        <div className='rounded-div p-3 hover:scale-105 ease-out duration-300 bg-white'>
+        <div className='rounded-div bg-gray-900 rounded-md p-3 hover:bg-gray-800 '>
             <div className='flex justify-between items-center'>
                 <div>
                     <img className='rounded-full' src={coin.item.small} alt={coin.item.id} />

@@ -7,7 +7,7 @@ import Footer from './HomeComp/Footer'
 
 const Home = () => {
   return (
-    <div>
+    <div className='bg-black text-white'>
       <Navbar/>
       <Hero/>
       <Featured/>

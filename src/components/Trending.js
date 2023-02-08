@@ -15,7 +15,7 @@ function Trending() {
     },[url])
 
   return (
-    <div className='rounded-div py-5 lg:px-10 px-2 bg-gray-100'>
+    <div className='rounded-div py-5 lg:px-10 px-2 bg-black text-white'>
         <h1 className='text-3xl font-semibold my-5'>Trending</h1>
         <div className='grid gap-3 md:grid-cols-2 xl:grid-cols-3 sm:grid-cols-1'>
             {data.map((coin)=> (

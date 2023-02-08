@@ -44,11 +44,12 @@ setCurrency(e.target.value)
 
 
   return (
-    <div>
+    <div className='bg-black text-white'>
       <Navbar/>
-<Trending/>
 
-    <div className='flex w-24 mt-4 ml-20'>
+<h1 className='text-2xl lg:text-5xl lg:mb-4 font-semibold lg:ml-28 ml-1 mt-4'>Today's cryptocurrency<br/>prices</h1>
+<p className='text-md text-gray-300 lg:ml-28 my-2 ml-1'>View the latest trends in cryptocurrency prices.</p>
+    <div className='flex w-20 mt-4 lg:ml-28 ml-2 '>
 <select value={currency}  onChange={changeCurrency} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
   <option value="inr">INR</option>
   <option value="eur">EUR</option>
@@ -56,7 +57,7 @@ setCurrency(e.target.value)
 
 </select></div>
 
-      <div className='lg:mx-20'>
+      <div className='lg:mx-20 bg-gray-900  text-white'>
       
       <div className='rounded-div my-10 py-4'>
         
@@ -64,7 +65,7 @@ setCurrency(e.target.value)
             <thead >
                 <tr className='border-b'>
                     
-                    <th>#</th>
+                    <th>no</th>
                     <th className='text-left'>Coin</th>
                     <th></th>
                     <th>Price</th>
@@ -82,19 +83,19 @@ setCurrency(e.target.value)
 <>
 
 
-<tr key={i.id} className='h-[75px] border-b overflow-hidden hover:bg-gray-100'>
+<tr key={i.id} className='h-[75px] border-b hover:bg-gray-800 overflow-hidden'>
   
       <td  >{i.market_cap_rank}</td>
       <td>
         <div className='flex items-center'>
           <img className='w-6 ml-2' src={i.image} alt={i.id} />
-          <div className='w-[90px] hidden sm:table-cell'><Link to={`/coin/${i.id}`}>{i.name}</Link></div>
+          <div className='w-[90px] hidden  sm:table-cell'><Link to={`/coin/${i.id}`} className='font-bold'>{i.name}</Link></div>
         </div>
       </td>
       <td>
-        <div><Link to={`/coin/${i.id}`}>{i.symbol.toUpperCase()}</Link></div>
+        <div ><Link className='font-semibold text-lg' to={`/coin/${i.id}`}>{i.symbol.toUpperCase()}</Link></div>
       </td>
-      <td><Link to={`/coin/${i.id}`}>{currencySymbol} {i.current_price.toLocaleString()}</Link> </td>
+      <td><Link to={`/coin/${i.id}` } className="font-semibold text-md">{currencySymbol} {i.current_price.toLocaleString()}</Link> </td>
       <td className={i.price_change_percentage_24h > 0 ? "text-green-500" : "text-red-600"}>{i.price_change_percentage_24h.toFixed(2)}%</td>
       <td className='w-[200px] hidden md:table-cell'>{currencySymbol} {i.total_volume.toLocaleString()}</td>
       <td className='w-[200px] hidden md:table-cell' >{currencySymbol} {i.market_cap.toLocaleString()}</td>
@@ -115,7 +116,7 @@ setCurrency(e.target.value)
 
 </div>
 </div>
-
+<Trending/>
     </div>
   )
 }

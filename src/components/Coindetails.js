@@ -43,12 +43,12 @@ useEffect(()=>{
   return (
     <>
       <Navbar/>
-     <div className='flex flex-col justify-center items-center  h-[full] bg-gray-50 '>
-      <div className='shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-4 h-[35%] mt-10 bg-white'>
+     <div className='flex flex-col justify-center items-center text-white h-[full] bg-black '>
+      <div className='shadow-md bg-gray-900 rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-4 h-[35%] mt-10 '>
         <h1 className='lg:text-6xl md:text-6xl text-center text-4xl font-extrabold '>{coins.name}</h1>
       </div>
-      <div className='shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6  mt-4 bg-white'>
-        <p className='lg:text-xl md:text-xl text-lg bg-purple-500 text-white pl-6'>Rank: #{coins.coingecko_rank}</p>
+      <div className='shadow-md bg-gray-900 rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6  mt-4 '>
+        <p className='lg:text-xl md:text-xl text-lg  text-white pl-6'>Rank: #{coins.coingecko_rank}</p>
        <div  className='flex  justify-between lg:px-6 md:px-6 px-2 mt-4'>
        <div >
     <div className='flex' >{coins.image ? <img className='pr-3' src={coins.image.small} alt='' /> : null}
@@ -62,17 +62,17 @@ useEffect(()=>{
       </div>
 
 
-<div className='shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6  mt-4 lg:px-10 bg-white'>
+<div className='shadow-md bg-gray-900 rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6  mt-4 lg:px-10 '>
 <div >
                     <table className='flex flex-col justify-center items-center'>
                         <thead>
                             <tr>
-                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm bg-gray-100 font-semibold text-md '>1h</th>
-                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm bg-gray-100 font-semibold text-md '>24h</th>
-                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm bg-gray-100 font-semibold text-md'>7d</th>
-                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm bg-gray-100 font-semibold text-md'>14d</th>
-                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm bg-gray-100 font-semibold text-md'>30d</th>
-                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm bg-gray-100 font-semibold text-md'>1yr</th>
+                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm  font-semibold text-md '>1h</th>
+                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm  font-semibold text-md '>24h</th>
+                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm  font-semibold text-md'>7d</th>
+                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm  font-semibold text-md'>14d</th>
+                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm  font-semibold text-md'>30d</th>
+                                <th className='py-2 lg:px-8 md:px-6 px-4 rounded-sm  font-semibold text-md'>1yr</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -91,7 +91,7 @@ useEffect(()=>{
 </div>
 
 
-<div className='flex  justify-between shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6 h-[35%] mt-10 lg:px-14 md:px-2 px-2 bg-white'>
+<div className='flex bg-gray-900 justify-between shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6 h-[35%] mt-10 lg:px-14 md:px-2 px-2 '>
 
 <div >
                             <div className='flex flex-col   '>
@@ -120,7 +120,7 @@ useEffect(()=>{
                         </div>
                         </div>
 
-                        <div className='shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-4 h-[35%] mt-10 px-2 bg-white' >
+                        <div className=' bg-gray-900 shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-4 h-[35%] mt-10 px-2 ' >
                         <h3 className='text-lg font-semibold'>About</h3>
                         <p dangerouslySetInnerHTML={{
                             __html: DOMPurify.sanitize(coins.description ? coins.description.en : ''),
