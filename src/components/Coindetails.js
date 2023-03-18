@@ -96,11 +96,11 @@ useEffect(()=>{
 <div >
                             <div className='flex flex-col   '>
                                 <h4 className='lg:text-xl md:text-md text-sm font-semibold lg:pr-16 md:pr-4 pr-1' >24 Hour Low</h4>
-                                {coins.market_data?.low_24h ? <p className='md:text-md lg:text-xl text-sm text-gray-900'>${coins.market_data.low_24h.usd.toLocaleString()}</p> : null}
+                                {coins.market_data?.low_24h ? <p className='md:text-md lg:text-xl text-sm '>${coins.market_data.low_24h.usd.toLocaleString()}</p> : null}
                             </div>
                             <div className='flex flex-col   mt-2  '>
                                 <h4 className='lg:text-xl text-sm md:text-md font-semibold lg:pr-16 md:pr-4 pr-1'>24 Hour High</h4>
-                                {coins.market_data?.high_24h ? <p className='lg:text-xl text-sm text-gray-900'>${coins.market_data.high_24h.usd.toLocaleString()}</p> : null}                            </div>
+                                {coins.market_data?.high_24h ? <p className='lg:text-xl text-sm '>${coins.market_data.high_24h.usd.toLocaleString()}</p> : null}                            </div>
 
                         </div>
 
@@ -110,11 +110,11 @@ useEffect(()=>{
 <div >
                             <div className='flex flex-col   '>
                                 <h4 className=' text-sm  md:text-md lg:text-xl font-semibold lg:pr-16 md:pr-4 pr-1'>Market Cap</h4>
-                                {coins.market_data?.market_cap ? <p className=' md:text-md lg:text-xl text-sm text-gray-900'>${coins.market_data.market_cap.usd.toLocaleString()}</p> : null}
+                                {coins.market_data?.market_cap ? <p className=' md:text-md lg:text-xl text-sm '>${coins.market_data.market_cap.usd.toLocaleString()}</p> : null}
                             </div>
                             <div className='flex flex-col  mt-2  '>
                                 <h4 className=' lg:text-xl md:text-md text-sm font-semibold lg:pr-16 md:pr-4 pr-1'>Circulating Supply</h4>
-                                {coins.market_data ? <p className=' lg:text-xl md:text-md text-sm text-gray-900'>{coins.market_data.circulating_supply}</p> : null}
+                                {coins.market_data ? <p className=' lg:text-xl md:text-md text-sm '>{coins.market_data.circulating_supply}</p> : null}
                             </div>
 
                         </div>

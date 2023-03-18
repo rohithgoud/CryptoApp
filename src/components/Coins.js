@@ -85,7 +85,7 @@ setCurrency(e.target.value)
 
 <tr key={i.id} className='h-[75px] border-b hover:bg-gray-800 overflow-hidden'>
   
-      <td  >{i.market_cap_rank}</td>
+      <td key={i.id} >{i.market_cap_rank}</td>
       <td>
         <div className='flex items-center'>
           <img className='w-6 ml-2' src={i.image} alt={i.id} />
