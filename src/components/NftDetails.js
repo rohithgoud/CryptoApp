@@ -31,13 +31,14 @@ const NftDetails = () => {
       
       fetchNft();
       
-      }, [])
+      }, [params.id])
   return (
     <>
       <Navbar/>
 
 
-<section className="body-font  bg-black text-white pb-56">
+<div className='mt-4'>
+<section className="w-[90%] mx-auto my-14 border ">
   <div className="container flex py-24 md:flex-row flex-col justify-center items-center">
     <div className=" lg:w-[25%] lg:pl-20 md:pl-10 pl-10 md:w-1/2 w-5/6 mb-10 md:mb-0 ">
      {nft.image ? <img className=' h-56 w-56 object-cover object-center rounded' src={nft.image.small} alt='' /> : null}
@@ -52,6 +53,7 @@ const NftDetails = () => {
     </div>
   </div>
 </section>
+</div>
 
     </>
   )

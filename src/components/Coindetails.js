@@ -43,11 +43,11 @@ useEffect(()=>{
   return (
     <>
       <Navbar/>
-     <div className='flex flex-col justify-center items-center text-white h-[full] bg-black '>
-      <div className='shadow-md bg-gray-900 rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-4 h-[35%] mt-10 '>
-        <h1 className='lg:text-6xl md:text-6xl text-center text-4xl font-extrabold '>{coins.name}</h1>
+     <div className='flex flex-col justify-center items-center  h-[full] mt-14 mb-10 bg-gray-50'>
+      <div className='shadow-md bg-white rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-4 h-[35%] mt-10 '>
+        <h1 className='lg:text-6xl md:text-6xl text-center text-4xl font-semibold '>{coins.name}</h1>
       </div>
-      <div className='shadow-md bg-gray-900 rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6  mt-4 '>
+      <div className='shadow-md bg-white rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6  mt-4 '>
         <p className='lg:text-xl md:text-xl text-lg  text-white pl-6'>Rank: #{coins.coingecko_rank}</p>
        <div  className='flex  justify-between lg:px-6 md:px-6 px-2 mt-4'>
        <div >
@@ -62,7 +62,7 @@ useEffect(()=>{
       </div>
 
 
-<div className='shadow-md bg-gray-900 rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6  mt-4 lg:px-10 '>
+<div className='shadow-md bg-white rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6  mt-4 lg:px-10 '>
 <div >
                     <table className='flex flex-col justify-center items-center'>
                         <thead>
@@ -91,7 +91,7 @@ useEffect(()=>{
 </div>
 
 
-<div className='flex bg-gray-900 justify-between shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6 h-[35%] mt-10 lg:px-14 md:px-2 px-2 '>
+<div className='flex bg-white justify-between shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-6 h-[35%] mt-10 lg:px-14 md:px-2 px-2 '>
 
 <div >
                             <div className='flex flex-col   '>
@@ -120,7 +120,7 @@ useEffect(()=>{
                         </div>
                         </div>
 
-                        <div className=' bg-gray-900 shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-4 h-[35%] mt-10 px-2 ' >
+                        <div className=' bg-white shadow-md rounded-md lg:w-[60%] md:w-[80%] w-[95%] py-4 h-[35%] mt-10 px-2 ' >
                         <h3 className='text-lg font-semibold'>About</h3>
                         <p dangerouslySetInnerHTML={{
                             __html: DOMPurify.sanitize(coins.description ? coins.description.en : ''),

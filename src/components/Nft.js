@@ -43,14 +43,14 @@ const Nft = () => {
     <div>
       <Navbar/>
       
-<div className='bg-black pt-10 text-white'>
+<div className='mt-28 '>
 <h1 className='text-3xl text-center font-semibold mb-4'>Trending Nft's</h1>
 <div className='grid lg:grid-cols-4 gap-3 md:grid-cols-2 md:mx-4 mx-2
 lg:mx-7'>
 {
     nft.map((item)=>(
 
-<div key={item.id} className=" hover:bg-gray-800  cursor-pointer rounded-md bg-gray-900">
+<div key={item.id} className="  border cursor-pointer rounded-md ">
       <div>
       <Link to={`/Nft/${item.id}`}>
        <div className="h-full flex  items-center  p-4" key={item.id}>

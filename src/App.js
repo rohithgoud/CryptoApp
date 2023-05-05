@@ -14,7 +14,7 @@ import NftDetails from './components/NftDetails';
 function App() {
 
   return (
-    <div className='bg-black'>
+    <div>
     
       <Router>
         <Routes>
